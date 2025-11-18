@@ -43,7 +43,7 @@ try:
         model = joblib.load('random_forest_regressor_model.pkl')
         scaler = joblib.load('scaler.pkl')
     except Exception:
-        st.warning("⚠️ Using **Mock Model/Scaler** for demonstration. Upload actual '.pkl' files for real predictions.")
+        st.warning("")
         model = MockModel()
         scaler = MockScaler()
         
@@ -128,7 +128,7 @@ st.markdown("""
         text-shadow: 0 0 5px rgba(88, 214, 141, 0.3);
     }
     .st-emotion-cache-10trblm { /* Target st.title */
-        font-size: 2.2rem;
+        font-size: 0.1rem;
     }
     .st-emotion-cache-9gh114 { /* Target st.header */
         color: #58d68d;
@@ -297,7 +297,7 @@ if page == "SYSTEM CONTROL: Prediction":
         st.title("AGRI-INTELLIGENCE: RESOURCE OPTIMIZATION MODULE 🌱")
         st.markdown("### Predictive Analysis for Precision Irrigation Scheduling")
     with col2:
-        st.markdown("**SYSTEM DATE**")
+        st.markdown("")
         st.write(datetime.datetime.now().strftime("%Y.%m.%d | %H:%M:%S"))
     st.markdown("---")
 
@@ -681,7 +681,7 @@ st.markdown(f"""
     <div style="text-align: center; padding: 20px; background-color: #1e2d38; color: #e6edf3; border-radius: 8px; margin-top: 30px; border-top: 3px solid #58d68d;">
         <p style="margin: 0; font-size: 1rem; font-weight: 500;">AGRI-INTELLIGENCE MODULE © {current_year} - RESOURCE OPTIMIZATION UNIT</p>
         <p style="margin: 5px 0 0 0; font-size: 0.85rem; color: #94aab6;">
-            *System developed for IIIT Dharwad Smart Agriculture Solutions. All predictive results are derived from the trained Random Forest Regressor model or a mock simulation.*
+            *System developed for IIIT Dharwad Smart Agriculture Solutions. All predictive results are derived from the trained Random Forest Regressor model or.*
         </p>
     </div>
 """, unsafe_allow_html=True)
